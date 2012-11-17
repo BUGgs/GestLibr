@@ -1,0 +1,51 @@
+# CMake
+CMakeFiles/
+CMakeCache.txt
+config.h
+install_manifest.txt
+CTestTestfile.cmake
+Makefile
+cmake_install.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
+# Eclipse
+*.project
+*.cproject
+*.settings
+
+# Komodo
+*.komodoproject
+
+# Documentation
+docs/api
+
+# Mac OS X
+.DS_Store
+
+# Windows
+*.vcxproj
+*.vcxproj.*
+*.sdf
+*.sln
+*.suo
+*.opensdf
+ipch
+Debug
+
+# Binaries
+*.a
+*.so
+*.so.*
+*.dylib
+
+# Other
+*~
+my.token
+ebay.config.php
+config.php
+ebay.config.sandbox.php
+config.inc.php
+
+
+*.zip

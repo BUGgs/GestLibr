@@ -1,0 +1,100 @@
+Changelog Pour Gestlibr
+Romain DUCHENE
+
+29/02/2012
+- Internet: Ajout page ebay pour synchro manuelle
+
+28/02/2012
+- Ouvrages: Ajout champs ebayItemId, ebayLastSync, ebayCategoryId, ebayCategoryIdSecondary, ebayShippingCost, ebayShippingCostInternational, publishDate, publishLocation, format, pageNumber, binding, editor, language, collection
+- creation table: language, format, binding
+- Ouvrages: changement gestion des quantités: bouton + et -
+- Ouvrages: création table bookupdate
+- Ouvrages: cracking ajout, update, delete, motif qté dans table bookupdate
+- Ebay: creation table "ebaycategory"
+
+19/02/2012
+- Ouvrages: Ajout champs "Sur Ebay"
+
+// MAJ des lieu d'éditions
+update `book` SET `publishLocation`= "Paris" WHERE `description` LIKE "P.,%" AND `publishLocation`!="" ;
+
+// MAJ des formats automatiques
+update `book` SET `format`= "2" WHERE `description` LIKE "%in 8%" AND `format`="" ;
+update `book` SET `format`= "1" WHERE `description` LIKE "%in 12%" AND `format`="" ;
+update `book` SET `format`= "3" WHERE `description` LIKE "%in 4%" AND `format`="" ;
+update `book` SET `format`= "4" WHERE `description` LIKE "%in folio%" AND `format`="" ;
+update `book` SET `format`= "5" WHERE `description` LIKE "%in plano%" AND `format`="" ;
+update `book` SET `format`= "6" WHERE `description` LIKE "%in 16%" AND `format`="" ;
+update `book` SET `format`= "7" WHERE `description` LIKE "%in 32%" AND `format`="" ;
+
+// MAJ Reliures
+update `book` SET `binding`= "1" WHERE `description` LIKE "% br.%" AND `binding`="" ;
+update `book` SET `binding`= "2" WHERE `description` LIKE "%relié%" AND `binding`="" ;
+update `book` SET `binding`= "3" WHERE `description` LIKE "%cartonné%" AND `binding`="" ;
+
+
+UPDATE `book` SET `format`="-1",`binding`="-1",`language`="1",`ebayCategoryId`="-1",`ebayCategoryIdSecondary`="-1",`ebayShippingCost`="4",`ebayShippingCostInternational`="4" WHERE 1;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 11099 WHERE b.idBook = bic.idBook AND bic.idCategory = 58 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 6 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 17 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 1 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 8 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 4 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 24 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 5 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 7 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 23 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 63 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 26 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 81753 WHERE b.idBook = bic.idBook AND bic.idCategory = 2 ;
+
+
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146406 WHERE b.idBook = bic.idBook AND bic.idCategory = 3 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 9 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 13 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 15 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 12 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 14 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 21 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146407 WHERE b.idBook = bic.idBook AND bic.idCategory = 10 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 97208 WHERE b.idBook = bic.idBook AND bic.idCategory = 19 ;
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 97208 WHERE b.idBook = bic.idBook AND bic.idCategory = 18 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 77944 WHERE b.idBook = bic.idBook AND bic.idCategory = 44 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 1093 WHERE b.idBook = bic.idBook AND bic.idCategory = 43 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 77933 WHERE b.idBook = bic.idBook AND bic.idCategory = 36 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146147 WHERE b.idBook = bic.idBook AND bic.idCategory = 42 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 77875 WHERE b.idBook = bic.idBook AND bic.idCategory = 37 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 77875 WHERE b.idBook = bic.idBook AND bic.idCategory = 60 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 97177 WHERE b.idBook = bic.idBook AND bic.idCategory = 62 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 120559 WHERE b.idBook = bic.idBook AND bic.idCategory = 59 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 97217 WHERE b.idBook = bic.idBook AND bic.idCategory = 41 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146179 WHERE b.idBook = bic.idBook AND bic.idCategory = 61 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 17183 WHERE b.idBook = bic.idBook AND bic.idCategory = 65 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146288 WHERE b.idBook = bic.idBook AND bic.idCategory = 16 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 77956 WHERE b.idBook = bic.idBook AND bic.idCategory = 40 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 77956 WHERE b.idBook = bic.idBook AND bic.idCategory = 66 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 268 WHERE b.idBook = bic.idBook AND bic.idCategory = 28 ;
+
+update `book` AS b, `bookincategory` AS bic SET b.`ebayCategoryId`= 146446 WHERE b.idBook = bic.idBook AND bic.idCategory = 67 ;
+

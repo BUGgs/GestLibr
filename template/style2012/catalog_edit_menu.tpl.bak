@@ -1,0 +1,6 @@
+<p>{CATALOG_NB_BOOKS} {BOOKS_IN_CATALOG}</p>
+<br/>
+<p><a href='{CATALOG_VIEW_URL}'>{CATALOG_VIEW}</a></p>
+<p><a href='{CATALOG_ADD_CATEGORY_URL}'>{CATALOG_ADD_CATEGORY}</a></p>
+<p><a href='{CATALOG_ADD_SEARCH_URL}'>{CATALOG_ADD_SEARCH}</a></p>
+

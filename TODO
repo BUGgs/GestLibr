@@ -1,0 +1,72 @@
+TODO Pour Gestlibr
+Romain DUCHENE
+MAJ 01/05/2006
+
+- Limiter le nb d'affichage des cat achat
+  (en mettre 3 et en cliquant faire apparaitre un div complet)
+- Limiter les cat achat client
+- pour modifier les VARIA mal entrés: classer les résultats de recherche par modifyDate
+- Changer les dates dans la table order pour faire correspondre aux vraies dates de sortie
+  des catalogues anciens (cf maman à fournir) : FORMAT: AAAA/MM/JJ
+- Tel2 est viré: ré-importer les 2-3 infos des clients l'utilisant (mobile)
+
+Général :
+- Authentification par login/password
+- Gestion des droits pour les accès : visu, modif, effacement
+- Changement de langue dans les profil
+- Management des users par l'admin
+- Script d'installation automatique
++ Logo
++ Template plus joli
+- Configuration dans la database
+- Utilisation massive des CSS
+- Protection du champs ID dans les forms/URL
++ Utilisation massive des classes objects
+
+Module Clients :
+- Imprimer les listing clients / fiche client
++ Centres d'intéret des clients (encore possibilité d'usage des numéros)
+- Recherche par rubrique et par achat ds catalogue
+- Listing multi-pages
+- Lister les factures du clients
+- Lister historique d'achats (avec prix) - Coloration en fonction du prix ( > 150 €)
+- Lettre de rappel
+- Ouvrages recherchés
+- Champs de remise spéciale
+
+Module Livres :
++ Ajout / modif / suppr de fiches
++ Appartenance à des rubriques multiples
+- Images multiples associées aux fiches
++ Editeurs HTML avancés dans le formulaire de saisie pour mise en page
++ Historique des parutions dans les catalogues
++ Historique des parutions dans les catalogues AVANT MIGRATION
+- Historique des ventes
++ Création d'un catalogue / listing à partir d'un résultat de recherche
++ Listing multi-pages
+- dans listing: afficher si un ouvrage est multi rubriques
+- Changement massif d'une sélection vers une nouvelle rubrique, ou de n'importe quel champs
+
+Module Catalogue :
++ Catalogue mono et multi rubrique
++ Ajout - suppression manuelle de fiches
++ pré-visualisation du catalogue pour pouvoir virer des fiches
++ Archivage et numérotation des catalogue avec sauvegarde des fiches concernées
++ Impression via des templates
+- Possibilité de mettre ou non des photos (issues des fiches ou non) : choix pleine page, demi-page, dans la fiche
+- Acheter sous plusieurs catalogues en simultané (idem facture)
++ Génération en PDF
++ Génération en HTML
+- Exportation en XSL/XML
++ Exportation pour abebooks / ebay...
++ Cloturer (verouiller) / décloturer un catalogue
+
+Module Editions :
+- Etiquettes clients avec filtres possibles (via le panneau de recherche)
+- pouvoir demarrer l'impression sur la X ieme étiquette (en cas ou elle ait deja servie) avec un nb d'exemplaires choisi
+- Impression étiquettes via des template
+
+Faire un menu Maintenance :
+- Vérifier les ouvrages qui n'ont pas de rubrique
+- Voir les clients qui n'ont pas encore commandé
+- Mailing liste aux clients avec archivage

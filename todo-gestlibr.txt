@@ -1,0 +1,55 @@
+TODO Gestlibr
+
+--------------------------------
+AVANT Migration:
+--------------------------------
+Rubriques à modifier :
++ Rubrique 4 (militaria et histoire générale) devient Communisme
++ Rubrique 6 (oubliée)  : Allemagne
++ Rubrique 11 à basculer en rubrique 10  (Occupation, Vichy, Résistance, Mémoires, ..)
++ Rubrique 16 devient : Presse, Edition, Journalisme.
++ Rubriques 20, 22, 27, 29, 32 sont à supprimer
++ Rubrique 25 (entomologie) devient : Livres d'Or
++ Rubrique 28 devient VARIA
++ Rubrique 30 à basculer en rubrique 03
++ Rubrique 31 à basculer en rubrique 17 (militaria ...)
++ Rubrique 33 à nommer " Première Guerre Mondiale, Editions Originales, Livres reliés, Envois "
+
++ import.php : stripslashes dans les imports
++ enlever les slashes dans formulaires : stripslashes 
+
+CLIENTS :
++ Les clients actifs ne sont pas cochés sur leur fiche: Corrigé: bug d'affichage
+
+
+--------------------------------
+POST Migration:
+--------------------------------
+- C'est quoi organisation ?? -> Société...
+- Possibilité de faire défiler les fiches complètes à la suite ?
+-  Comment mettre un ouvrage dans 2 rubriques en faisant la fiche ?
+- Comme pour clients, les livres n'apparaissent pas dans l'ordre alphabétique stricte lors d'une recherche (ex: rechercher CA)
+Avec l'ancien GL, on pouvait choisir la recherche en début de champ ou n'importe où dans le champ.
+- Possibilité d'agrandir un petit peu le champ description ?
+- Comment utiliser les symboles (gras, souligné, ...) pour les champs auteur et titre ?
+- Descendre dans les fiches avec la roulette de la souris quand je suis dans un champ. 
+- Je dois pouvoir faire défiler les fiches en visualisant la date d'entrée: en ce moment, toutes les nouvelles fiches sont entrées en N° 89
+- Sélectionner d'un coup et par rubrique toutes les fiches entrées en 89.
+- cocher non nul si catalogue non nul
+- enlever limitation à 3000 dans la recherche
+- selection du catalogue : 2° mode en parcourant les fiches 1 par 1 avec bouton "ajouter" ou "fiche suivante"
+- catalogues classés par ordre décroissant
+- reclassement automatique par ordre alphabetique des fiches par rubrique après ajout
+- dans édition catalogue, pouvoir faire modif. fiche et revenir automaiquement à la liste
+- ajouter dans le catalogue directement 1 modif ou une création de fiche du chapitre cible
+-sortir toutes les fiches répertoriées en CATALOGUE 89
+- refaire les TITRES
+- supprimer le grand blanc en haut de la 1° page du cat.
+- dans l'édition du catalogue, prévoir "migrer vers 1 autre catalogue"
+- prix : ronds. supprimer ,00
+- pour les marges, je pense qu'il faudrait 12 mm de chaque côté
+- Modifs taille caractères : après vérif., je crois qu'il faut peut être garder la taille actuelle mais diminuer les espaces de lignes : j'ai exactement 25 % de titres en moins par rapport à un ancien catalogue.
+- peut-on mettre le prix sur la même ligne que le texte pour gagner de la place ?
+- quand je "fabrique" un catalogue, ça rame un max.
+- Où apparaissent les catalogues d'achat et leurs centres d'interêts sur leur fiche ?
+- Mettre la 1° lettre du prénom en majuscule

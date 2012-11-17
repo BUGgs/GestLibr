@@ -1,0 +1,29 @@
+Gestlibr
+Romain DUCHENE
+--------------
+
+04-04-2004 : Version 0.1 alpha
+- Première version avec les fonctions du menu clients fonctionnel (ajout, recherche, modif)
+- Gestion de templates
+- Gestion multilingue
+
+11-06-2004 : Version 0.2 alpha
+- Sécurisation des variables GET & POST
+- Permière gestion des ouvrages (sans rubrique) : ajout, recherche, modif
+
+08-07-2004 : Version 0.3 alpha
+- debut de gestion des rubriques
+
+01-04-2005 : Version 0.4 alpha
+- Passage de la gestion des clients et ouvrage sous une classe
+
+23-08-2005 : Version 0.5 alpha
+- Création de la classse Catalog
+
+01-11-2005 : Version 0.9 beta
+- Gestion des ajouts / Suppressions de fiches dans le catalogue (via recherche)
+- Gestion des titres/chapitres dans les catalogues
+- Passage des champs descriptions et notes en HTML (via tiny_mce)
+- Génération automatique des catalogues en PDF (usage de html2pdf)
+- Modification des ajouts/modifs de catégories dans les fiches ouvrages (plus pratique)
+

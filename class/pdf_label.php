@@ -71,7 +71,7 @@ class PDF_Label extends FPDF {
 		'5163'=>array('name'=>'5163',	'paper-size'=>'letter',	'metric'=>'mm',	'marginLeft'=>1.762,	'marginTop'=>10.7, 		'NX'=>2,	'NY'=>5,	'SpaceX'=>3.175,	'SpaceY'=>0,	'width'=>101.6,		'height'=>50.8,		'font-size'=>8),
 		'5164'=>array('name'=>'5164',	'paper-size'=>'letter',	'metric'=>'in',	'marginLeft'=>0.148,	'marginTop'=>0.5, 		'NX'=>2,	'NY'=>3,	'SpaceX'=>0.2031,	'SpaceY'=>0,	'width'=>4.0,		'height'=>3.33,		'font-size'=>12),
 		'8600'=>array('name'=>'8600',	'paper-size'=>'letter',	'metric'=>'mm',	'marginLeft'=>7.1, 		'marginTop'=>19, 		'NX'=>3, 	'NY'=>10, 	'SpaceX'=>9.5, 		'SpaceY'=>3.1, 	'width'=>66.6, 		'height'=>25.4,		'font-size'=>8),
-		'etiquettes-catalog'=>array('name'=>'etiquettes-catalog',	'paper-size'=>'A4',	'metric'=>'mm',	'marginLeft'=>0,	'marginTop'=>10, 		'NX'=>2,	'NY'=>5,	'SpaceX'=>0,	'SpaceY'=>0,	'width'=>105,		'height'=>60,		'font-size'=>11),
+		'etiquettes-catalog'=>array('name'=>'etiquettes-catalog',	'paper-size'=>'A4',	'metric'=>'mm',	'marginLeft'=>10,	'marginTop'=>10, 		'NX'=>2,	'NY'=>5,	'SpaceX'=>0,	'SpaceY'=>0,	'width'=>105,		'height'=>60,		'font-size'=>11),
 		'etiquette-expe'=>array('name'=>'etiquette-expe',	'paper-size'=>'A4',	'metric'=>'mm',	'marginLeft'=>3,	'marginTop'=>10, 		'NX'=>1,	'NY'=>3,	'SpaceX'=>0,	'SpaceY'=>10,	'width'=>200,		'height'=>90,		'font-size'=>14),
 		'L7163'=>array('name'=>'L7163',	'paper-size'=>'A4',		'metric'=>'mm',	'marginLeft'=>5,		'marginTop'=>15, 		'NX'=>2,	'NY'=>7,	'SpaceX'=>25,		'SpaceY'=>0,	'width'=>99.1,		'height'=>38.1,		'font-size'=>9)
 	);

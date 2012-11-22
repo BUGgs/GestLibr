@@ -8,7 +8,7 @@
            </tr>
            <tr>
                <td>{DESCRIPTION} :</td>
-               <td><textarea id='description-catalog' name='description' cols='90' rows='12'>{DESCRIPTION_V}</textarea></td>
+               <td><textarea id='description-catalog' name='description' cols='90' rows='20'>{DESCRIPTION_V}</textarea></td>
            </tr>
         </table>
     </fieldset>

@@ -46,5 +46,8 @@ ebay.config.php
 config.php
 ebay.config.sandbox.php
 config.inc.php
-.gitignore
 *.zip
+tmp/*
+*.xls*
+.gitignore
+

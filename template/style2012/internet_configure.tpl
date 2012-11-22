@@ -26,6 +26,7 @@
             <OPTION VALUE='ftp'>FTP</option>
             <OPTION VALUE='ebay'>Ebay</option>
             <OPTION VALUE='amazon'>Amazon</option>
+            <OPTION VALUE='isbn-only'>ISBN Only</option>
             <OPTION VALUE='oscommerce'>oscommerce</option>
         </SELECT></TD></TR>
         <TR><TD>{PARAM}: </TD><TD><INPUT TYPE='text' SIZE='90' NAME='param' VALUE='{PARAM_VALUE}'></TD></TR>

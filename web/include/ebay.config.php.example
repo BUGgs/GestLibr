@@ -1,0 +1,22 @@
+<?php
+
+// Legacy provider only. The REST provider reads its credentials from the
+// environment and integration_group_settings instead.
+return array(
+    'sandbox' => array(
+        'devId' => 'CHANGE_ME',
+        'appId' => 'CHANGE_ME',
+        'certId' => 'CHANGE_ME',
+        'userToken' => 'CHANGE_ME',
+    ),
+    'production' => array(
+        'devId' => 'CHANGE_ME',
+        'appId' => 'CHANGE_ME',
+        'certId' => 'CHANGE_ME',
+        'userToken' => 'CHANGE_ME',
+    ),
+    'findingApiVersion' => '1.13.0',
+    'tradingApiVersion' => '967',
+    'shoppingApiVersion' => '967',
+    'halfFindingApiVersion' => '1.2.0',
+);

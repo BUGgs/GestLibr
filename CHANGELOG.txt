@@ -1,0 +1,48 @@
+Changelog Pour Gestlibr
+Romain DUCHENE
+
+14/04/2026 v5.0.3
+- fix : Une fiche sans prix est quand même synchronisée sur ebay à 1 Euro
+
+31/03/2026 v5.0.2
+- Correctifs mineurs sur la synchro eBay: limite de taille des champs titre et description
+
+23/03/2026 v5.0.1
+- Ajout export des ésultats de recherche en XLSX
+- Ajout de store "étanches" entre groupe gestlibr
+- Ajout fonction "Audit Ebay": vérification de la cohérence entre les bases ebay et gestlibr (ajout des liens orphelins entre ebay et gestlibr, synchro prix et description, fiches manquantes)
+- Synchro et historisation des commandes ebay, visu des ventes dans les fiches
+- Ajout du header / footer dans la description envoyée à ebay
+- Synchro complète Ebay (avec simulation)
+- Sécurisation du login
+- Ajout de reCAPTCHA v3 (anti attaque du login)
+- Cosmétique: refonte des titres et de la page de login
+
+15/03/2026 v5.0 beta
+- Mise à jour du code en PHP 8.4
+- Passage en architecture docker
+- Revue complète de la charte graphique et des menus
+-⁠ ⁠⁠Différencier création et recherche de fiche : ok
+-⁠ ⁠Rajouter Rayon sur liste de résultat de recherche : ok
+- ⁠⁠Rendre le rayon éditable dans les résultats de recherche : ok
+-⁠ ⁠Import ISBN : L’intégrer dans le parcours de création de fiche (focus ISBN et auto remplissage sans photo) : ok
+-⁠ Fiche : Ajouter « sous titre » (qui va se concaténer à sur ebay à la fin du nom de l’objet) : ok
+-⁠ ⁠⁠Ajouter compteur de car total : auteur + titre + sous titre (rouge si >80) : ok
+- Langues : ajouter latin : ok
+- ⁠⁠ISBN : correction de l’import via Amazon (et donc le résumé) :ok 
+- Synchronisation unitaire (ajout / modif / suppression) des fiches sur ebay
+- Panneau d'administration de la config et des Utilisateurs
+
+29/02/2012 v4.0
+- Internet: Ajout page ebay pour synchro manuelle
+
+28/02/2012
+- Ouvrages: Ajout champs ebayItemId, ebayLastSync, ebayCategoryId, ebayCategoryIdSecondary, ebayShippingCost, ebayShippingCostInternational, publishDate, publishLocation, format, pageNumber, binding, editor, language, collection
+- creation table: language, format, binding
+- Ouvrages: changement gestion des quantit�s: bouton + et -
+- Ouvrages: cr�ation table bookupdate
+- Ouvrages: cracking ajout, update, delete, motif qt� dans table bookupdate
+- Ebay: creation table "ebaycategory"
+
+19/02/2012
+- Ouvrages: Ajout champs "Sur Ebay"

@@ -1,0 +1,40 @@
+services:
+  web:
+    build:
+      target: prod
+    ports: []
+    volumes:
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/web:/var/www/html
+    networks:
+      gestlibr_net:
+      gestlibr_proxy:
+        aliases:
+          - gestlibr-web
+
+  mysql:
+    image: mysql:8.0
+    platform: linux/arm64/v8
+    ports: []
+    volumes:
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/mysql:/var/lib/mysql
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/01-gestlibr.sql:/docker-entrypoint-initdb.d/01-gestlibr.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/02-ebay-listing-state.sql:/docker-entrypoint-initdb.d/02-ebay-listing-state.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/03-bookphoto-sort-order.sql:/docker-entrypoint-initdb.d/03-bookphoto-sort-order.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/04-ebay-finalisation.sql:/docker-entrypoint-initdb.d/04-ebay-finalisation.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/05-book-subtitle.sql:/docker-entrypoint-initdb.d/05-book-subtitle.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/06-language-latin.sql:/docker-entrypoint-initdb.d/06-language-latin.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/07-book-weight-ebay-fixed-category.sql:/docker-entrypoint-initdb.d/07-book-weight-ebay-fixed-category.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/08-integration-group-settings.sql:/docker-entrypoint-initdb.d/08-integration-group-settings.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/09-ebay-orders-history.sql:/docker-entrypoint-initdb.d/09-ebay-orders-history.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/10-ebay-description-template.sql:/docker-entrypoint-initdb.d/10-ebay-description-template.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/11-ebay-sync-v3.sql:/docker-entrypoint-initdb.d/11-ebay-sync-v3.sql:ro
+      - ${DEPLOY_BASE_DIR:-/srv/gestlibr}/deploy/docker/mysql/init/12-login-recaptcha.sql:/docker-entrypoint-initdb.d/12-login-recaptcha.sql:ro
+
+  phpmyadmin:
+    profiles:
+      - debug
+
+networks:
+  gestlibr_proxy:
+    external: true
+    name: ${PROXY_NETWORK:-proxy}

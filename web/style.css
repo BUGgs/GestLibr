@@ -1,0 +1,139 @@
+body 
+{ font-family: helvetica, arial, geneva, sans-serif; 
+  background-color: #aac7fe;
+  color: #000000; 
+  font-size: 12pt;
+  text-indent: 0; 
+  margin: 0px 
+}
+p 
+{ font-family: helvetica, arial, geneva, sans-serif; 
+  color: #000000; 
+  font-size: 9pt; 
+  text-indent: 0; 
+  margin: 0px 
+}
+br 
+{ font-family: helvetica, arial, geneva, sans-serif; 
+  color: #000000; 
+  font-size: 9pt; 
+  text-indent: 0; 
+  margin: 0px 
+}
+a        
+{ font-family: helvetica, arial, geneva, sans-serif; text-decoration: underline; 
+  color: #000000; 
+  font-size: 9pt; 
+  text-indent: 0; 
+  margin: 0px 
+}
+a:hover, a:active 
+{ font-family: helvetica, arial, geneva, sans-serif;
+  color: #FF9900;
+  text-decoration: none;
+  font-size: 9pt;
+  text-indent: 0; 
+  margin: 0px 
+}
+
+td        
+{ font-family: helvetica, arial, geneva, sans-serif; 
+  color: #000000; 
+  font-size: 12pt;
+  text-indent: 0; 
+  margin: 0px 
+}
+
+td.search
+{ font-family: helvetica, arial, geneva, sans-serif;
+  color: #000000;
+  font-size: 12pt;
+  text-indent: 0;
+  margin: 0px
+}
+
+INPUT.Body
+{
+  font-family: helvetica, arial, geneva, sans-serif;
+  background-color: #FAD03E;
+  color: #5555FD;
+  font-size: 14pt;
+  font-weight: 500;
+  margin: 0px;
+  text-indent: 0;
+}
+
+input, textarea
+{
+  font-family: helvetica, arial, geneva, sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 14pt;
+  font-weight: 500;
+  margin: 0px;
+  text-indent: 0;
+}
+
+.menuSelected
+{ font-family: helvetica, arial, geneva, sans-serif;
+  text-decoration: none;
+  color: #336699;
+  font-size: 15pt 
+}
+
+.menuSubLink
+{ font-family: helvetica, arial, geneva, sans-serif;
+  text-decoration: underline;
+  color: #0066cc;
+  font-size: 12pt
+}
+
+.menuSubLink:hover, .menuSubLink:active 
+{ font-family: helvetica, arial, geneva, sans-serif;
+  background-color: #59aef5;
+  color: #FF9900;
+  text-decoration: none;
+  font-size: 12pt
+}
+
+.menuLink
+{ font-family: helvetica, arial, geneva, sans-serif;
+  text-decoration: underline;
+  color: #336699;
+  font-size: 15pt 
+}
+
+.menuLink:hover, .menuLink:active 
+{ font-family: helvetica, arial, geneva, sans-serif;
+  background-color: #59aef5;
+  color: #FF9900;
+  text-decoration: none;
+  font-size: 15pt 
+}
+
+td.result-header
+{ 
+  color: #000000; 
+  background-color: #034c89;
+  font-size: 12pt;
+  text-indent: 0; 
+  margin: 0px 
+}
+
+td.result-color-1
+{ 
+  color: #000000; 
+  background-color: #4d98d7;
+  font-size: 12pt;
+  text-indent: 0; 
+  margin: 0px 
+}
+
+td.result-color-2
+{ 
+  color: #000000; 
+  background-color: #59aef5;
+  font-size: 12pt;
+  text-indent: 0; 
+  margin: 0px 
+}

@@ -1,0 +1,1 @@
+<h2>{CATEGORIES_SEARCH_TXT}</h2>

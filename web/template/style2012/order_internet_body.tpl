@@ -1,0 +1,14 @@
+<tr>
+  <td>{ID}</td>
+  <td>{ORDER_PRINT}</td>
+  <td>{ORDER_DATE}</td>
+  <td>{ORDER_MAIL}</td>
+  <td>{ORDER_SHIP_PRICE}</td>
+  <td>{ORDER_TOTAL_PRICE}</td>
+  <td>{ORDER_PAYEMENT_TYPE}</td>
+  <td>{ORDER_SHIP_METHOD}</td>
+  <td>{ORDER_DATE_PAYEMENT}</td>
+  <td>{ORDER_DATE_VALIDATE}</td>
+  <td>{ORDER_DATE_SHIPPING}</td>
+  <td>{ORDER_DATE_RECEIVED}</td>
+</tr>

@@ -1,0 +1,1 @@
+<h2>{CLIENTS_SEARCH_TXT}</h2>

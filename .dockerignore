@@ -1,0 +1,21 @@
+*
+!web/
+!web/**
+!docker/
+!docker/**
+
+# Runtime-only data, never needed in image builds
+web/pictures/
+web/pictures/**
+web/tmp/
+web/tmp/**
+web/sql/
+web/sql/**
+
+# Large legacy/vendor trees not needed in Docker build context
+web/vendor/
+web/vendor/**
+web/EbatNs/
+web/EbatNs/**
+web/EbatNs-newbroken/
+web/EbatNs-newbroken/**

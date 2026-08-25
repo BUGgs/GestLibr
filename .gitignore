@@ -1,0 +1,28 @@
+.DS_Store
+web/vendor/
+.env.dev
+.env.prod
+docker/mysql/data/*
+!docker/mysql/data/.gitkeep
+!docker/mysql/data/.gitignore
+
+# Production/runtime data: kept on persistent volumes, never in Git.
+web/pictures/
+web/sauve-db/
+web/tokens/
+web/tmp/
+web/include/my.token*
+web/tools/sauve-db.sql
+web/tools/sauve-db.zip
+gestlibr.sql
+
+# Legacy eBay credentials. Use environment variables or grouped DB settings.
+web/include/ebay.config.php
+web/config/ebay.config.php
+web/config/ebay.config.sandbox.php
+
+# phpMyAdmin was installed temporarily and is not part of GestLibr.
+web/sql/
+
+# TCPDF demo signing key. Generate a private certificate outside Git if used.
+web/html2pdf/_tcpdf_5.0.002/tcpdf.crt

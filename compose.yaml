@@ -1,0 +1,85 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+      target: base
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      TZ: ${TZ:-Europe/Paris}
+      DB_HOST: mysql
+      DB_NAME: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      EBAY_PROVIDER: ${EBAY_PROVIDER:-legacy}
+      EBAY_ENV: ${EBAY_ENV:-sandbox}
+      EBAY_CLIENT_ID: ${EBAY_CLIENT_ID:-}
+      EBAY_CLIENT_SECRET: ${EBAY_CLIENT_SECRET:-}
+      EBAY_REDIRECT_URI: ${EBAY_REDIRECT_URI:-}
+      EBAY_MARKETPLACE_ID: ${EBAY_MARKETPLACE_ID:-EBAY_FR}
+      EBAY_FIXED_CATEGORY_ID: ${EBAY_FIXED_CATEGORY_ID:-}
+      EBAY_MERCHANT_LOCATION_KEY: ${EBAY_MERCHANT_LOCATION_KEY:-}
+      EBAY_PAYMENT_POLICY_ID: ${EBAY_PAYMENT_POLICY_ID:-}
+      EBAY_FULFILLMENT_POLICY_ID: ${EBAY_FULFILLMENT_POLICY_ID:-}
+      EBAY_RETURN_POLICY_ID: ${EBAY_RETURN_POLICY_ID:-}
+      EBAY_REFRESH_TOKEN: ${EBAY_REFRESH_TOKEN:-}
+      GOOGLE_BOOKS_API_KEY: ${GOOGLE_BOOKS_API_KEY:-}
+      EBAY_SYNC_TRIGGER_TOKEN: ${EBAY_SYNC_TRIGGER_TOKEN:-}
+    networks:
+      - gestlibr_net
+
+  mysql:
+    image: mysql:5.7
+    platform: ${MYSQL_PLATFORM:-linux/amd64}
+    restart: unless-stopped
+    command: --character-set-server=utf8 --collation-server=utf8_general_ci --sql-mode=""
+    environment:
+      TZ: ${TZ:-Europe/Paris}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    volumes:
+      - ${MYSQL_DATA_DIR:-./docker/mysql/data}:/var/lib/mysql
+      - ${MYSQL_INIT_FILE:-./docker/mysql/init/01-gestlibr.sql}:/docker-entrypoint-initdb.d/01-gestlibr.sql:ro
+      - ./docker/mysql/init/02-ebay-listing-state.sql:/docker-entrypoint-initdb.d/02-ebay-listing-state.sql:ro
+      - ./docker/mysql/init/03-bookphoto-sort-order.sql:/docker-entrypoint-initdb.d/03-bookphoto-sort-order.sql:ro
+      - ./docker/mysql/init/04-ebay-finalisation.sql:/docker-entrypoint-initdb.d/04-ebay-finalisation.sql:ro
+      - ./docker/mysql/init/05-book-subtitle.sql:/docker-entrypoint-initdb.d/05-book-subtitle.sql:ro
+      - ./docker/mysql/init/06-language-latin.sql:/docker-entrypoint-initdb.d/06-language-latin.sql:ro
+      - ./docker/mysql/init/07-book-weight-ebay-fixed-category.sql:/docker-entrypoint-initdb.d/07-book-weight-ebay-fixed-category.sql:ro
+      - ./docker/mysql/init/08-integration-group-settings.sql:/docker-entrypoint-initdb.d/08-integration-group-settings.sql:ro
+      - ./docker/mysql/init/09-ebay-orders-history.sql:/docker-entrypoint-initdb.d/09-ebay-orders-history.sql:ro
+      - ./docker/mysql/init/10-ebay-description-template.sql:/docker-entrypoint-initdb.d/10-ebay-description-template.sql:ro
+      - ./docker/mysql/init/11-ebay-sync-v3.sql:/docker-entrypoint-initdb.d/11-ebay-sync-v3.sql:ro
+      - ./docker/mysql/init/12-login-recaptcha.sql:/docker-entrypoint-initdb.d/12-login-recaptcha.sql:ro
+    networks:
+      - gestlibr_net
+
+  phpmyadmin:
+    image: phpmyadmin:5.2-apache
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+      UPLOAD_LIMIT: 64M
+    networks:
+      - gestlibr_net
+
+networks:
+  gestlibr_net:
+    driver: bridge
